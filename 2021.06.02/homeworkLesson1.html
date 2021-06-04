@@ -13,17 +13,36 @@
             text-align: center;
             color: blue;
         }
+		
+		.left {
+		  text-align: left;
+		}
+		.right {
+		  text-align: right;
+		}
+		.center {
+		  text-align: center;
+		}
+		
     </style>
 </head>
 <body>
     <div>
-        Huk Ihor
+        <h2>Huk Ihor</h2>
     </div>
 	<div id="message">
 	
 	</div>
 	<br/>
-	<button onclick="favorEat()">Любимое блюдо</button><button onclick="favorAlcohol()">Любимое алкогольный напиток</button><button onclick="favorDrink()">Любимый безалкогольный напиток</button>
+	
+	<table style="width:100%">
+      <tr>
+       <td class="right"><button onclick="favorEat()">Любимое блюдо</button></td>
+       <td class="center"><button onclick="favorAlcohol()">Любимое алкогольный напиток</button></td>
+       <td class="left"><button onclick="favorDrink()">Любимый безалкогольный напиток</button></td>
+      </tr>
+    </table>
+	
 	
     <script>
         
