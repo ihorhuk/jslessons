@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 1</title>
+    <style>
+        div {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Huk Ihor
+    </div>
+	<div id="message">
+	
+	</div>
+	<br/>
+	<button onclick="favorEat()">Любимое блюдо</button><button onclick="favorAlcohol()">Любимое алкогольный напиток</button><button onclick="favorDrink()">Любимый безалкогольный напиток</button>
+	
+    <script>
+        
+		function favorEat() {
+		   document.getElementById("message").innerHTML = "Суши, шашлык-машлык";
+		}
+		
+		function favorAlcohol() {
+		   document.getElementById("message").innerHTML = "Не пью";
+		}
+		
+		function favorDrink() {
+		   document.getElementById("message").innerHTML = "Клубничный морс";
+		}
+    </script>
+</body>
+</html>
