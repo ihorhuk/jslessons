@@ -8,14 +8,19 @@
 </head>
 
 <body>
-    <script>
-        // string - тип данных для хранения строковых (текст) значений. Строковые значения должны быть взяты в кавычки ' или "
-        let value1 = "hello";
-        let value2 = 'world';
+<label for="firstNumber">First number:</label>
+<input id="firstNumber"/>
+<label for="secondNumber">Second number:</label>
+<input id="secondNumber"/>
+<label for="thirdNumber">Symbol to replace:</label>
+<input id="thirdNumber"/>
+<div/>
+<div id="resultPlace"/>
+</div>
 
-        let value3 = value1 + " " + value2; // конкатенация - сцепление строк. В результатте конкатенации, в переменной value3 запишется значение "hello world";
-        console.log(value3);
-    </script>
+<button onclick="replaceInnerNumber();"> Replace</button>
+<script src="lesson1.js"></script>
+    
 </body>
 
 </html>

@@ -8,14 +8,27 @@
 </head>
 
 <body>
-    <script>
-        // string - тип данных для хранения строковых (текст) значений. Строковые значения должны быть взяты в кавычки ' или "
-        let value1 = "hello";
-        let value2 = 'world';
+<label for="firstNumber">Nominal:</label>
+<input id="firstNumber"/>
+<label for="secondNumber">Quantity:</label>
+<input id="secondNumber"/>
 
-        let value3 = value1 + " " + value2; // конкатенация - сцепление строк. В результатте конкатенации, в переменной value3 запишется значение "hello world";
-        console.log(value3);
-    </script>
+<label for="thirdNumber">Nominal:</label>
+<input id="thirdNumber"/>
+<label for="fourthNumber">Quantity:</label>
+<input id="fourthNumber"/>
+
+<label for="fifthNumber">Nominal:</label>
+<input id="fifthNumber"/>
+<label for="sixthNumber">Quantity:</label>
+<input id="sixthNumber"/>
+<div/>
+<div id="resultPlace"/>
+</div>
+
+<button onclick="calculateSummaMoney();"> Calculate</button>
+<script src="lesson1.js"></script>
+    
 </body>
 
 </html>
