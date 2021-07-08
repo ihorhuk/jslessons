@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Доработайте сценарий. Если пользователь ввел значение равное 0 или не числовое значение для высоты и радиуса цилиндра - сообщите об ошибке.
+        Если введенные значения корректные - рассчитайте объем цилиндра.
+        Если конвертация строкового значения в целочисленное прошла не успешно, то результат конвертации NaN. Для проверок значения в условии на равенство c NaN
+        нужно использовть функцию isNaN(value), которая вернет true если значение value не является числом. Такая проверка - value == NaN, не сработает.
+    </pre>
+    <script>
+        alert("Вычисление объема цилиндра.");
+        //  V=π * r в квадрате * h
+		const radius = prompt("Введите радиус цилиндра");
+        const height = prompt("Введите высоту цилиндра");
+		
+        const r = Number(radius);
+        const h = Number(height);
+		
+		const isRadiusHasCorrectValue = !isNaN(r) && (r > 0);
+		const isHeightHasCorrectValue = !isNaN(h) && (h > 0);
+		// условие задачи требует такое определение, но на мой взгляд определение выше - более корректно
+		//const isRadiusHasCorrectValue = !isNaN(r) && (r != 0);
+		//const isHeightHasCorrectValue = !isNaN(h) && (h != 0);
+
+		if(isRadiusHasCorrectValue && isHeightHasCorrectValue) {
+          const V = Math.PI * Math.pow(r, 2) * h;
+          alert(`Объем цилиндра с высотой ${h} и радиусом ${r} = ${V}`);
+		} else {
+		  var radiusMessage = 'нет';
+		  var heightMessage = 'нет';
+		  if(isNaN(r)){
+		    radiusMessage = `Не удалось привести радиус к корректному числу: ${radius}`;
+		  }
+		  if(isNaN(h)){
+			heightMessage = `Не удалось привести высоту к корректному числу: ${height}`;
+		  }
+		
+		  alert(`Не удалось рассчитать объем. Проблема с радиусом: ${radiusMessage}; проблема с высотой: ${heightMessage}`);
+		}
+    </script>
+</body>
+</html>
+
