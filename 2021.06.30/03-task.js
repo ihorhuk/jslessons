@@ -19,7 +19,7 @@ let totalPrice = 0;
 totalPrice += productPrice1 * productQuantity1;
 totalPrice += productPrice2 * productQuantity2;
 totalPrice += productPrice3 * productQuantity3;
-ordersCount = ++ordersCount;
+++ordersCount;
 
 console.log(`Общая сумма ${totalPrice}`);
 
