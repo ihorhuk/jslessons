@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Попросите у пользователя ввести название города. Удалите этот город из элементов массива. 
+        Если города нет в массиве, сообщите об этом пользователю.
+        Выведите массив на экран после удаления элементов.
+    </pre>
+    <script>
+        let cities = ["London", "Paris", "Berlin", "Rome", "Budapest", "Lisbon", "Madrid", "Amsterdam"];
+		let inputValue = prompt('Введите город ', 'Odessa');
+		let cityDeleted = false;
+		for (let index = 0; index < cities.length; index++) {
+			if(cities[index] == inputValue) {
+				delete cities[index];
+				cityDeleted = true;
+			}
+		}
+		if(!cityDeleted) {
+			alert('Нет такого города в списке на ликвидацию');
+		}
+		alert(cities);
+    </script>
+</body>
+</html>
