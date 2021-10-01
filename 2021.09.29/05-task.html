@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Создайте функцию, которая принимает массив значений и возвращает массив с дублирующимися значениями или null если повторяющихся значений в массиве нет.
+    </pre>
+    <script>
+	function filterDuplicates(sourceArray) {
+		if(sourceArray) {
+			let valueSet = new Set(sourceArray);
+			return intersection(valueSet, sourceArray)
+		
+		} else {
+			return null;
+		}
+	}
+	
+	function intersection(setA, arrayB) {
+		var _intersection = new Set();
+		for (var elem of arrayB) {
+			if (setA.has(elem)) {
+				_intersection.add(elem);
+			}
+		}
+    return _intersection;
+}
+        
+    </script>
+</body>
+</html>
