@@ -443,3 +443,41 @@
                 favoriteFruit: 'apple'
             }
         ];
+		
+		//1) Адреса электронной почты всех пользователей (email)
+        //2) Имя и фамилию пользователей с наибольшим количеством друзей (свойства name и friends)
+        //3) Компанию пользователя с наибольшим балансом и компанию пользователя с наименьшим балансом (свойства company и balance)
+		let emails = new Set();
+		let popularestUser;
+		let richestUser;
+		let pourestUser;
+		
+		for(const user : users ) {
+			emails.add(user.email)
+			if(popularestUser) {
+				if(popularestUser.friends.length < user.friends.length) {
+					popularestUser = user;
+				}
+			} else {
+				popularestUser = user;
+			}
+			if(richestUser) {
+				if(richestUser.balance < user.balance) {
+					richestUser = user;
+				}
+			} else {
+				richestUser = user;
+			}
+			if(pourestUser) {
+				if(pourestUser.balance > user.balance) {
+					pourestUser = user;
+				}
+			} else {
+				pourestUser = user;
+			}
+			
+		}
+		console.log(emails);
+		console.log('Popularest user: ' + popularestUser.name.first + ' ' + popularestUser.name.last + ' has ' + popularestUser.friends.length + ' friends');
+		console.log('Richest user`s company ' + richestUser.company + ' has ' + richestUser.balance + '; and poorest user`s company ' + pourestUser.company + ' has ' + pourestUser.balance);
+		
